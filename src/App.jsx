@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Home from './pages/home/Home.jsx';
 import Dashboard from './pages/dashboard/Dashboard.jsx';
 import Machines from './pages/machines/Machines.jsx';
@@ -7,8 +7,9 @@ import Planning from './pages/planning/Planning.jsx';
 import Reports from './pages/reports/Reports.jsx';
 import Settings from './pages/settings/Settings.jsx';
 import Login from './pages/login/Login.jsx';
-import { getCustomTheme } from './Theme/theme.js';
+import { getCustomTheme } from './Theme';
 import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 
 const router = createBrowserRouter([
   {
@@ -31,9 +32,12 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  const myTheme = useMemo(() => createTheme(getCustomTheme('light')), []);
-  const theme = useTheme();
-  console.log(theme.palette);
+  // @ts-ignore
+  const currentTheme = useSelector((state) => state.theme.value);
+  const myTheme = useMemo(
+    () => createTheme(getCustomTheme(currentTheme)),
+    [currentTheme]
+  );
 
   return (
     <ThemeProvider theme={myTheme}>

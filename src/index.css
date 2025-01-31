@@ -45,3 +45,9 @@
   --pure-white: #ffffff; /* White */
   --electric-cyan: #00d1de; /* Bright Cyan */
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

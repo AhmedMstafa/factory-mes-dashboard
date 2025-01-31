@@ -1,3 +1,3 @@
-export default function SideBar() {
-  return <h1>SideBar Will Be Here</h1>;
+export default function SideBar({ handleDrawerClose, open }) {
+  return <></>;
 }
