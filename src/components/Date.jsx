@@ -1,18 +1,20 @@
-import * as React from 'react';
-
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { useState } from 'react';
 export default function Date() {
-  const [value, setValue] = React.useState(null);
-
+  const [value, setValue] = useState(null);
+  function handleChangeDate(newValue) {
+    setValue(newValue);
+    console.log(newValue);
+  }
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer
         components={['DatePicker']}
         sx={{
-          width: '50px !important',
+          width: '40px !important',
           mt: 'auto',
           mb: 'auto',
           overflow: 'hidden',
@@ -23,9 +25,9 @@ export default function Date() {
           },
         }}
       >
-        <DatePicker
+        <DesktopDatePicker
           value={value}
-          onChange={(newValue) => setValue(newValue)}
+          onChange={(newValue) => handleChangeDate(newValue)}
           sx={{
             '& div': {
               border: 'none !important',
