@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import Home from './pages/home/Home.jsx';
 import Dashboard from './pages/dashboard/Dashboard.jsx';
 import Machines from './pages/machines/Machines.jsx';
@@ -6,6 +7,8 @@ import Planning from './pages/planning/Planning.jsx';
 import Reports from './pages/reports/Reports.jsx';
 import Settings from './pages/settings/Settings.jsx';
 import Login from './pages/login/Login.jsx';
+import { getCustomTheme } from './Theme/theme.js';
+import { useMemo } from 'react';
 
 const router = createBrowserRouter([
   {
@@ -28,5 +31,13 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  const myTheme = useMemo(() => createTheme(getCustomTheme('light')), []);
+  const theme = useTheme();
+  console.log(theme.palette);
+
+  return (
+    <ThemeProvider theme={myTheme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
