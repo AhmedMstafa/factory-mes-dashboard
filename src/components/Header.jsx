@@ -28,20 +28,8 @@ const today = dayjs();
 const yasterday = dayjs().subtract(1, 'day');
 const lastWeek = dayjs().subtract(7, 'day');
 
-export default function Header({ open, handleDrawerOpen }) {
+export default function Header({ handleDrawerOpen, open }) {
   const [selectedDay, setSelctedDay] = useState(today);
-
-  function lastWeekHanlder() {
-    setSelctedDay(lastWeek);
-  }
-
-  function yesterdayHanlder() {
-    setSelctedDay(yasterday);
-  }
-
-  function todayHanlder() {
-    setSelctedDay(today);
-  }
 
   function handleChangeDate(newValue) {
     setSelctedDay(newValue);
@@ -51,9 +39,8 @@ export default function Header({ open, handleDrawerOpen }) {
     <Box
       component="nav"
       sx={{
-        minHeight: '50px',
         boxShadow: '0 3px 6px #272D3B33 ',
-        flexGrow: 1,
+        minHeight: '50px',
       }}
     >
       <Container
@@ -65,37 +52,39 @@ export default function Header({ open, handleDrawerOpen }) {
           flexGrow={1}
           flexWrap="wrap-reverse"
           justifyContent="space-between"
-          gap={2}
           sx={{
-            my: { xs: 2, md: 0 },
+            my: { xs: 2, lg: 0 },
+            gap: { xs: 0.5, sm: 1, md: 2 },
           }}
         >
           <Stack
             direction="row"
             alignItems="center"
-            gap={1}
             flexGrow={1}
             sx={{
-              justifyContent: { xs: 'center', md: 'start' },
+              justifyContent: { xs: 'center', lg: 'start' },
+              gap: { xs: 0.5, sm: 1, md: 1 },
             }}
           >
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={handleDrawerOpen}
-              sx={{
-                display: { xs: 'flex', md: 'none' },
-              }}
-            >
-              <MenuOutlinedIcon />
-            </IconButton>
+            {!open && (
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={handleDrawerOpen}
+                sx={{
+                  display: { xs: 'flex', lg: 'none' },
+                }}
+              >
+                <MenuOutlinedIcon />
+              </IconButton>
+            )}
 
             <Select data={factoriesList} />
             <Select data={linesList} />
             <Box
               sx={{
-                display: { xs: ' none', md: 'block' },
+                display: { xs: ' none', lg: 'block' },
               }}
             >
               <HiOutlineRocketLaunch style={style} />
@@ -103,25 +92,25 @@ export default function Header({ open, handleDrawerOpen }) {
           </Stack>
           <Stack
             direction="row"
-            gap={1}
             flexGrow={1}
             sx={{
-              justifyContent: { xs: 'center', md: 'end' },
+              justifyContent: { xs: 'center', lg: 'end' },
+              gap: { xs: 0.5, sm: 1, md: 1 },
             }}
           >
             <HeaderButton
               text="Today"
-              onClickHanlder={todayHanlder}
+              onClickHanlder={() => handleChangeDate(today)}
               isActive={!selectedDay.diff(today)}
             />
             <HeaderButton
               text="Yesterday"
-              onClickHanlder={yesterdayHanlder}
+              onClickHanlder={() => handleChangeDate(yasterday)}
               isActive={!selectedDay.diff(yasterday)}
             />
             <HeaderButton
               text="Last Week"
-              onClickHanlder={lastWeekHanlder}
+              onClickHanlder={() => handleChangeDate(lastWeek)}
               isActive={!selectedDay.diff(lastWeek)}
             />
             <Date value={selectedDay} handleChangeDate={handleChangeDate} />

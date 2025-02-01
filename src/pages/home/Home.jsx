@@ -3,25 +3,24 @@ import { Outlet } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import SideBar from '../../components/SideBar';
 import Header from '../../components/Header';
+import { Stack } from '@mui/material';
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
+  const [open, toggleOpen] = useState(true);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
+  const toggleDrawerOpen = () => {
+    toggleOpen((prev) => !prev);
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <Header {...{ handleDrawerOpen, open }} />
-      <SideBar {...{ handleDrawerClose, open }} />
-      <Box component="main">
-        <Outlet />
-      </Box>
+    <Box sx={{ display: 'flex', direction: 'column', height: '100vh' }}>
+      <SideBar {...{ open, handleDrawerOpen: toggleDrawerOpen }} />
+      <Stack flexGrow={1}>
+        <Header {...{ handleDrawerOpen: toggleDrawerOpen, open }} />
+        <Box component="main">
+          <Outlet />
+        </Box>
+      </Stack>
     </Box>
   );
 }

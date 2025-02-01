@@ -1,0 +1,7 @@
+<svg id="planning" xmlns="http://www.w3.org/2000/svg" width="51.624" height="51.624" viewBox="0 0 51.624 51.624">
+  <path id="Path_414" data-name="Path 414" d="M0,0H51.624V51.624H0Z" fill="none"/>
+  <circle id="Ellipse_124" data-name="Ellipse 124" cx="4.5" cy="4.5" r="4.5" transform="translate(5.98 34.936)" fill="none" stroke="#f40009" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <ellipse id="Ellipse_125" data-name="Ellipse 125" cx="4.5" cy="4" rx="4.5" ry="4" transform="translate(35.98 8.936)" fill="none" stroke="#f40009" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path id="Path_415" data-name="Path 415" d="M28.208,8V18.755A10.755,10.755,0,0,1,17.453,29.51H11l6.453-6.453m0,12.906L11,29.51" transform="translate(12.661 9.208)" fill="none" stroke="#f40009" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path id="Path_416" data-name="Path 416" d="M5,30.963V20.208A10.755,10.755,0,0,1,15.755,9.453h6.453L15.755,3m0,12.906,6.453-6.453" transform="translate(5.755 3.453)" fill="none" stroke="#f40009" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

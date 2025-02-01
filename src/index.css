@@ -51,3 +51,10 @@
   margin: 0;
   padding: 0;
 }
+
+a:link,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
