@@ -1,19 +1,26 @@
 import { Box, MenuItem, TextField } from '@mui/material';
+import { useParams } from 'react-router-dom';
 
-export default function Select({ data }) {
+export default function Select({ selectName, data, onChangeHandler }) {
+  const params = useParams();
+  const paramId = params[`${selectName}Id`];
   return (
     <Box
       sx={{
         flexGrow: '1',
-        maxWidth: '214px',
+        maxWidth: data.length === 1 ? '80px' : '214px',
         height: '40px',
         bgcolor: 'var(--ocean-navy)',
         borderRadius: '8px',
+        transition: ' 0.5s ',
       }}
     >
       <TextField
+        onChange={onChangeHandler}
+        name="select"
         id="outlined-select-currency"
-        defaultValue={0}
+        disabled={data.length === 1}
+        defaultValue={paramId ?? 0}
         select
         sx={{
           width: '100%',
@@ -42,16 +49,16 @@ export default function Select({ data }) {
           },
         }}
       >
-        {data.map((option, index) => (
+        {data.map((option) => (
           <MenuItem
-            key={option.value}
-            value={index}
+            key={option.label}
+            value={option.value}
             sx={{
               fontSize: 'var(--fs-4)',
             }}
           >
             {option.icon}
-            {option.value}
+            {data.length === 1 ? '' : option.label}
           </MenuItem>
         ))}
       </TextField>

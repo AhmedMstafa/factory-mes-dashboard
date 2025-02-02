@@ -10,7 +10,9 @@ import Login from './pages/login/Login.jsx';
 import { getCustomTheme } from './Theme';
 import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-
+import Production from './pages/dashboard/production/Production.jsx';
+import Factory from './pages/dashboard/factory/Factory.jsx';
+import Line from './pages/dashboard/line/Line.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,7 +21,15 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />,
         children: [
-          { path: 'dashboard', element: <Dashboard /> },
+          {
+            path: 'dashboard',
+            element: <Dashboard />,
+            children: [
+              { path: 'production', element: <Production /> },
+              { path: 'factory/:factoryId', element: <Factory /> },
+              { path: 'factory/:factoryId/line/:lineId', element: <Line /> },
+            ],
+          },
           { path: 'machines', element: <Machines /> },
           { path: 'planning', element: <Planning /> },
           { path: 'reports', element: <Reports /> },

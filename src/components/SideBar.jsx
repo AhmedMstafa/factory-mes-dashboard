@@ -27,7 +27,7 @@ const pages = [
   {
     title: 'Dashboard',
     icon: <IoGridOutline style={style} />,
-    path: '/dashboard',
+    path: '/dashboard/production',
   },
   { title: 'Machines', icon: <TbTool style={style} />, path: '/machines' },
   { title: 'Planning', icon: <GrSync style={style} />, path: '/planning' },
@@ -46,7 +46,6 @@ const pages = [
 
 export default function SideBar({ open, handleDrawerOpen }) {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <Box
       component="aside"
