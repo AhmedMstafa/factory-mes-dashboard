@@ -27,7 +27,7 @@ const pages = [
   {
     title: 'Dashboard',
     icon: <IoGridOutline style={style} />,
-    path: '/dashboard/production',
+    path: '/dashboard',
   },
   { title: 'Machines', icon: <TbTool style={style} />, path: '/machines' },
   { title: 'Planning', icon: <GrSync style={style} />, path: '/planning' },
@@ -81,44 +81,46 @@ export default function SideBar({ open, handleDrawerOpen }) {
       </Box>
       <Box sx={{ mt: '153px' }}>
         <List>
-          {pages.map((page, index) => (
-            <Link to={page.path} key={page.title}>
-              <ListItem
-                key={page.title}
-                disablePadding
-                sx={{
-                  marginTop: index === 4 ? '150px' : '0',
-                  marginBottom: '20px',
-                  color: 'var(--pure-white)',
-                  opacity: location.pathname === page.path ? '1' : '0.8',
-                  background:
-                    location.pathname === page.path
+          {pages.map((page, index) => {
+            const isCurrentPage = location.pathname.startsWith(`${page.path}`);
+            return (
+              <Link to={page.path} key={page.title}>
+                <ListItem
+                  key={page.title}
+                  disablePadding
+                  sx={{
+                    marginTop: index === 4 ? '150px' : '0',
+                    marginBottom: '20px',
+                    color: 'var(--pure-white)',
+                    opacity: isCurrentPage ? '1' : '0.8',
+                    background: isCurrentPage
                       ? 'var(--twilight-black)'
                       : 'none',
-                  '& div': {
-                    minWidth: { xs: '0', md: '55px' },
-                  },
-                }}
-              >
-                <ListItemButton>
-                  <ListItemIcon
-                    sx={{
-                      marginInline: 'auto',
-                    }}
-                  >
-                    {page.icon}
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={page.title}
-                    sx={{
-                      ml: '22px',
-                      display: { xs: 'none', md: 'block' },
-                    }}
-                  />
-                </ListItemButton>
-              </ListItem>
-            </Link>
-          ))}
+                    '& div': {
+                      minWidth: { xs: '0', md: '55px' },
+                    },
+                  }}
+                >
+                  <ListItemButton>
+                    <ListItemIcon
+                      sx={{
+                        marginInline: 'auto',
+                      }}
+                    >
+                      {page.icon}
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={page.title}
+                      sx={{
+                        ml: '22px',
+                        display: { xs: 'none', md: 'block' },
+                      }}
+                    />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            );
+          })}
         </List>
       </Box>
     </Box>
