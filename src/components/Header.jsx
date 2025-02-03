@@ -125,7 +125,8 @@ export default function Header({ handleDrawerOpen, open }) {
       component="nav"
       sx={{
         boxShadow: '0 3px 6px #272D3B33 ',
-        minHeight: '50px',
+        minHeight: { xs: '120px', md: '50px' },
+        zIndex: 1,
       }}
     >
       <Container

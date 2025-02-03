@@ -13,11 +13,25 @@ export default function Home() {
   };
 
   return (
-    <Box sx={{ display: 'flex', direction: 'column', height: '100vh' }}>
+    <Box
+      sx={{
+        display: 'flex',
+        direction: 'column',
+        maxHeight: '100vh',
+        overflow: 'hidden',
+      }}
+    >
       <SideBar {...{ open, handleDrawerOpen: toggleDrawerOpen }} />
       <Stack flexGrow={1}>
         <Header {...{ handleDrawerOpen: toggleDrawerOpen, open }} />
-        <Box component="main">
+        <Box
+          component="main"
+          sx={{
+            bgcolor: 'var(--frost-blue)',
+            maxHeight: '100vh',
+            overflowX: 'auto',
+          }}
+        >
           <Outlet />
         </Box>
       </Stack>
