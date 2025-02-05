@@ -2,7 +2,13 @@ import { Box, Typography } from '@mui/material';
 import PieChart from './PieChart';
 import { useEffect, useState } from 'react';
 
-export default function Pie({ lable, value, color, background }) {
+export default function Pie({
+  lable,
+  value,
+  color,
+  background,
+  boxSize = '73px',
+}) {
   const [valueState, setValueState] = useState(0);
   const data = [
     { id: lable, label: lable, value: valueState, color: color },
@@ -14,11 +20,11 @@ export default function Pie({ lable, value, color, background }) {
   }, [value]);
 
   return (
-    <Box>
+    <Box sx={{ width: 'fit-content' }}>
       <Box
         sx={{
-          width: '78px',
-          height: '78px',
+          width: boxSize,
+          height: boxSize,
           position: 'relative',
         }}
       >

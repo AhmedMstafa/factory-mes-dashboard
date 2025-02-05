@@ -1,19 +1,14 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import FactoryCart from './FactoryCard';
 
 export default function Production() {
   return (
-    <Container
-      maxWidth="xl"
-      sx={{
-        mt: '102px',
-        mb: '50px',
-      }}
-    >
+    <>
       <Stack
         direction="row"
         alignItems="center"
         justifyContent="space-between"
+        gap={2}
         sx={{
           mb: '22px',
         }}
@@ -33,7 +28,8 @@ export default function Production() {
             bgcolor: 'var(--pure-white)',
             borderRadius: '8px',
             display: 'flex',
-            width: '243px',
+            maxWidth: '243px',
+            flexGrow: 1,
           }}
         >
           <Button
@@ -96,6 +92,6 @@ export default function Production() {
         <FactoryCart />
         <FactoryCart />
       </Stack>
-    </Container>
+    </>
   );
 }

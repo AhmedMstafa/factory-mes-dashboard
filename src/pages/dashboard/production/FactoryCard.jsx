@@ -13,11 +13,17 @@ export default function FactoryCart() {
   function onClickHandler() {}
 
   return (
-    <Stack component="article">
+    <Stack
+      component="article"
+      sx={{
+        maxWidth: '350px',
+        flexGrow: 1,
+      }}
+    >
       <Paper
         onClick={onClickHandler}
         sx={{
-          width: '350px',
+          width: '100%',
           borderRadius: '8px',
           cursor: 'pointer',
           border: 'none',

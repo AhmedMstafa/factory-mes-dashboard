@@ -1,0 +1,77 @@
+import { Box, Paper, Stack, Typography } from '@mui/material';
+import { TfiLayoutAccordionList } from 'react-icons/tfi';
+
+export default function Factory() {
+  return (
+    <Box component="article">
+      <Paper
+        sx={{
+          maxWidth: '282px',
+          borderRadius: '8px',
+          cursor: 'pointer',
+          border: 'none',
+          boxShadow: '0px 8px 12px #0000001A',
+          transition: ' 0.3s linear',
+          ':hover': {
+            transform: 'translateY(-5px)',
+            boxShadow: '0px 16px 24px #0000001A',
+          },
+        }}
+      >
+        <Stack
+          direction="row"
+          sx={{
+            height: '40px',
+            alignItems: 'center',
+            ml: '15px',
+            borderBottom: '1px solid var(--moonlight-grey)',
+          }}
+        >
+          <TfiLayoutAccordionList />
+          <Typography
+            sx={{
+              fontSize: 'var(--fs-4)',
+              ml: '10px',
+            }}
+          >
+            Total Production
+          </Typography>
+        </Stack>
+        <Stack direction="row" justifyContent="space-between" px="15px">
+          <Box>
+            <Typography sx={{ fontSize: 'var( --fs-8)' }}>
+              5,000
+              <Typography
+                component="span"
+                sx={{ fontSize: 'var( --fs-3)', ml: '5px' }}
+              >
+                bph
+              </Typography>
+            </Typography>
+            <Typography
+              sx={{ fontSize: 'var( --fs-1)', color: 'var(--granite-grey)' }}
+            >
+              Production /h
+            </Typography>
+          </Box>
+          <Box>
+            <Typography sx={{ fontSize: 'var( --fs-8)' }}>
+              7,000 KM
+              <Typography
+                component="span"
+                sx={{ fontSize: 'var( --fs-3)', ml: '5px' }}
+              >
+                KM
+              </Typography>
+            </Typography>
+            <Typography
+              sx={{ fontSize: 'var( --fs-1)', color: 'var(--granite-grey)' }}
+            >
+              Actual Production
+            </Typography>
+          </Box>
+        </Stack>
+      </Paper>
+    </Box>
+  );
+}

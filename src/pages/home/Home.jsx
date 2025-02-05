@@ -28,7 +28,7 @@ export default function Home() {
           component="main"
           sx={{
             bgcolor: 'var(--frost-blue)',
-            maxHeight: '100vh',
+            height: '100vh',
             overflowX: 'auto',
           }}
         >

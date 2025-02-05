@@ -27,7 +27,7 @@ const pages = [
   {
     title: 'Dashboard',
     icon: <IoGridOutline style={style} />,
-    path: '/dashboard',
+    path: '/dashboard/production',
   },
   { title: 'Machines', icon: <TbTool style={style} />, path: '/machines' },
   { title: 'Planning', icon: <GrSync style={style} />, path: '/planning' },
@@ -54,6 +54,7 @@ export default function SideBar({ open, handleDrawerOpen }) {
         width: open ? '261px' : '0',
         transition: ' 0.3s linear',
         transform: open ? 'translateX(0)' : 'translateX(-261px)',
+        height: '100vh',
       }}
     >
       {open && (
@@ -74,7 +75,7 @@ export default function SideBar({ open, handleDrawerOpen }) {
       <Box
         sx={{
           mt: '50px',
-          display: { xs: 'none', sm: 'block' },
+          display: { xs: 'none', md: 'block' },
         }}
       >
         <Logo />
