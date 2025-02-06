@@ -26,7 +26,7 @@ function Line({ isLoginPage, gradient }) {
           left: '-50px',
           width: '100px',
           height: '20px',
-          background: 'red',
+          background: isLoginPage ? 'var(--pure-white)' : 'var(--flame-red)',
           transform: 'rotate(-45deg)',
         }}
       ></Box>

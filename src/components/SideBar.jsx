@@ -46,6 +46,14 @@ const pages = [
 
 export default function SideBar({ handleDrawerOpen, open }) {
   const location = useLocation();
+
+  function pageHandler(path) {
+    if (path === '/login') {
+      localStorage.removeItem('auth');
+      return;
+    }
+  }
+
   return (
     <Box
       component="aside"
@@ -86,7 +94,11 @@ export default function SideBar({ handleDrawerOpen, open }) {
           {pages.map((page, index) => {
             const isCurrentPage = location.pathname.startsWith(`${page.path}`);
             return (
-              <Link to={page.path} key={page.title}>
+              <Link
+                to={page.path}
+                key={page.title}
+                onClick={() => pageHandler(page.path)}
+              >
                 <ListItem
                   key={page.title}
                   disablePadding
