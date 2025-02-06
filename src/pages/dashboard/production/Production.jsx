@@ -61,9 +61,11 @@ export default function Production() {
         justifyContent="space-evenly"
         gap={3}
       >
-        {data.map((factory) => (
-          <FactoryCart key={factory.factoryName} factory={factory} />
-        ))}
+        {data.map((factory, index) => {
+          if (index > 0) {
+            return <FactoryCart key={factory.name} factory={factory} />;
+          }
+        })}
       </Stack>
     </>
   );

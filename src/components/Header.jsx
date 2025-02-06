@@ -9,67 +9,8 @@ import HeaderButton from './HeaderButton';
 import { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
-
+import data from '../data.json';
 const style = { marginInline: '10px', fontSize: '20px' };
-
-const factoriesList = [
-  {
-    value: 0,
-    label: 'All Factories',
-    icon: <IoPlanetOutline style={style} />,
-    lines: [
-      {
-        value: 0,
-        label: 'All Lines',
-        icon: <LuAudioWaveform style={style} />,
-      },
-    ],
-  },
-  {
-    value: 1,
-    label: 'Factory One',
-    icon: <IoPlanetOutline style={style} />,
-    lines: [
-      {
-        value: 0,
-        label: 'All Lines',
-        icon: <LuAudioWaveform style={style} />,
-      },
-      {
-        value: 1,
-        label: 'Line One',
-        icon: <LuAudioWaveform style={style} />,
-      },
-      {
-        value: 2,
-        label: 'Line Two',
-        icon: <LuAudioWaveform style={style} />,
-      },
-    ],
-  },
-  {
-    value: 2,
-    label: 'Factory Two',
-    icon: <IoPlanetOutline style={style} />,
-    lines: [
-      {
-        value: 0,
-        label: 'All Lines',
-        icon: <LuAudioWaveform style={style} />,
-      },
-      {
-        value: 1,
-        label: 'Line One',
-        icon: <LuAudioWaveform style={style} />,
-      },
-      {
-        value: 2,
-        label: 'Line Two',
-        icon: <LuAudioWaveform style={style} />,
-      },
-    ],
-  },
-];
 
 const today = dayjs();
 const yasterday = dayjs().subtract(1, 'day');
@@ -167,13 +108,13 @@ export default function Header({ handleDrawerOpen, open }) {
             )}
 
             <Select
-              selectName="factory"
-              data={factoriesList}
+              data={data}
+              icon={<IoPlanetOutline style={style} />}
               onChangeHandler={(data) => handleChangeSelect(data, 'factory')}
             />
             <Select
-              selectName="line"
-              data={factoriesList[selectedDashboard.factory].lines}
+              data={data[selectedDashboard.factory].lines}
+              icon={<LuAudioWaveform style={style} />}
               onChangeHandler={(data) => handleChangeSelect(data, 'line')}
             />
             <Box

@@ -10,7 +10,7 @@ import data1 from '../../../data.json';
 
 export default function Factory() {
   const { factoryId } = useParams();
-  const factoryData = data1[+factoryId - 1];
+  const factoryData = data1[factoryId];
   return (
     <>
       <Typography
@@ -22,7 +22,7 @@ export default function Factory() {
           mb: '22px',
         }}
       >
-        {factoryData.factoryName}
+        {factoryData.name}
       </Typography>
       <Box
         component="article"

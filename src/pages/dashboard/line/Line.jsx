@@ -11,7 +11,7 @@ import data from '../../../data.json';
 export default function Line() {
   const { lineId } = useParams();
   const { factoryId } = useParams();
-  const lineData = data[+factoryId - 1].lines[+lineId - 1];
+  const lineData = data[factoryId].lines[lineId];
   return (
     <>
       <Typography
@@ -23,7 +23,7 @@ export default function Line() {
           mb: '22px',
         }}
       >
-        {lineData.lineName}
+        {lineData.name}
       </Typography>
       <Box
         component="article"
@@ -44,7 +44,7 @@ export default function Line() {
           <LinePreformance data={lineData.preformance} />
           <PowerKPI data={lineData.power} />
           <CurrentActivity data={lineData.activity} />
-          <TimeLine name={lineData.lineName} data={lineData.timeLine} />
+          <TimeLine name={lineData.name} data={lineData.timeLine} />
         </Stack>
         <StreamTable data={lineData.stream} />
       </Box>

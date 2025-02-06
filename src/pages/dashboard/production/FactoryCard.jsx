@@ -7,9 +7,12 @@ import { MdOutlineShowChart } from 'react-icons/md';
 import { SlEqualizer } from 'react-icons/sl';
 import { PiMedalLight } from 'react-icons/pi';
 import Pie from '../../../components/pie-chart/Pie';
-
+import { useNavigate } from 'react-router-dom';
 export default function FactoryCart({ factory }) {
-  function onClickHandler() {}
+  const navigate = useNavigate();
+  function onClickHandler() {
+    navigate(`/dashboard/factory/${factory.id}`);
+  }
 
   return (
     <Stack
@@ -47,7 +50,7 @@ export default function FactoryCart({ factory }) {
             fontSize: 'var(--fs-4)',
           }}
         >
-          {factory.factoryName}
+          {factory.name}
         </Button>
         <Box
           sx={{
