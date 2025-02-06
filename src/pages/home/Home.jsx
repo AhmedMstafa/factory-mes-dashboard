@@ -8,9 +8,9 @@ import { Stack } from '@mui/material';
 export default function Home() {
   const [open, toggleOpen] = useState(true);
 
-  const toggleDrawerOpen = () => {
-    toggleOpen((prev) => !prev);
-  };
+  function handleDrawerOpen(openOrClose) {
+    toggleOpen(openOrClose);
+  }
 
   return (
     <Box
@@ -21,9 +21,9 @@ export default function Home() {
         overflow: 'hidden',
       }}
     >
-      <SideBar {...{ open, handleDrawerOpen: toggleDrawerOpen }} />
+      <SideBar {...{ handleDrawerOpen, open }} />
       <Stack flexGrow={1}>
-        <Header {...{ handleDrawerOpen: toggleDrawerOpen, open }} />
+        <Header {...{ handleDrawerOpen, open }} />
         <Box
           component="main"
           sx={{

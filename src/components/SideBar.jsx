@@ -44,7 +44,7 @@ const pages = [
   { title: 'Logout', icon: <TbLogout style={style} />, path: '/login' },
 ];
 
-export default function SideBar({ open, handleDrawerOpen }) {
+export default function SideBar({ handleDrawerOpen, open }) {
   const location = useLocation();
   return (
     <Box
@@ -55,6 +55,7 @@ export default function SideBar({ open, handleDrawerOpen }) {
         transition: ' 0.3s linear',
         transform: open ? 'translateX(0)' : 'translateX(-261px)',
         height: '100vh',
+        zIndex: 9999,
       }}
     >
       {open && (
@@ -62,7 +63,7 @@ export default function SideBar({ open, handleDrawerOpen }) {
           edge="start"
           color="inherit"
           aria-label="menu"
-          onClick={handleDrawerOpen}
+          onClick={() => handleDrawerOpen(false)}
           sx={{
             display: { xs: 'flex', lg: 'none' },
             marginLeft: 'auto',

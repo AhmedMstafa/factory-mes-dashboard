@@ -2,23 +2,7 @@ import { Box, Paper, Stack, Typography } from '@mui/material';
 import VLineChart from '../../../components/line-chart/VLineChart';
 import { BsActivity } from 'react-icons/bs';
 
-const data = [
-  {
-    'Loss Tree': 'Quality Loss',
-    Idle: 160,
-    IdleColor: '#ff7380',
-    'Cleansing process': 12,
-    'Cleansing processColor': '#6fcf53',
-    'Break-down': 2,
-    'Break-downColor': '#907ad6',
-    'Speed Loss': 53,
-    'Speed LossColor': '#d45faa',
-    'Quality Loss': 54,
-    'Quality LossColor': '#5ae6b3',
-  },
-];
-
-export default function TimeLine() {
+export default function TimeLine({ name, data }) {
   return (
     <>
       <Paper
@@ -69,8 +53,7 @@ export default function TimeLine() {
               fontWeight: 'bold',
             }}
           >
-            <Typography fontSize="var(--fs-2)">LINE</Typography>
-            <Typography fontSize="var(--fs-2)">NAME</Typography>
+            <Typography fontSize="var(--fs-2)">{name}</Typography>
           </Box>
           <VLineChart data={data} />
         </Box>

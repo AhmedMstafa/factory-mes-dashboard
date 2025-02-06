@@ -3,7 +3,7 @@ import Pie from '../../../components/pie-chart/Pie';
 import { RiEqualizerLine } from 'react-icons/ri';
 import Progress from '../../../components/Progress';
 
-export default function LinePreformance() {
+export default function LinePreformance({ data }) {
   return (
     <>
       <Paper
@@ -51,7 +51,7 @@ export default function LinePreformance() {
           >
             <Pie
               lable={'OEE'}
-              value={76}
+              value={data.oee}
               color={'var(--ocean-navy)'}
               background={'var(--granite-grey)'}
             />
@@ -65,17 +65,17 @@ export default function LinePreformance() {
           >
             <Progress
               title="Avalability"
-              width={80}
+              width={data.avalability}
               bgcolor="var(--bright-orange)"
             />
             <Progress
               title="Preformance"
-              width={30}
+              width={data.preformance}
               bgcolor="var(--sunburst-orange)"
             />
             <Progress
               title="Quality"
-              width={60}
+              width={data.quality}
               bgcolor="var(--bright-orange)"
             />
           </Stack>

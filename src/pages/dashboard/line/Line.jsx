@@ -5,56 +5,13 @@ import PowerKPI from './PowerKPI';
 import StreamTable from '../../../components/stream/StreamTable';
 import CurrentActivity from './CurrentActivity';
 import TimeLine from '../factory/TimeLine';
-
-const data = [
-  {
-    'cycle time': 14,
-    speed: 99,
-    uptime: 142,
-  },
-  {
-    'cycle time': 59,
-    speed: 74,
-    uptime: 100,
-  },
-  {
-    'cycle time': 191,
-    speed: 64,
-    uptime: 93,
-  },
-  {
-    'cycle time': 141,
-    speed: 32,
-    uptime: 116,
-  },
-  {
-    'cycle time': 68,
-    speed: 185,
-    uptime: 50,
-  },
-  {
-    'cycle time': 195,
-    speed: 93,
-    uptime: 90,
-  },
-  {
-    'cycle time': 18,
-    speed: 90,
-    uptime: 71,
-  },
-  {
-    'cycle time': 69,
-    speed: 180,
-    uptime: 48,
-  },
-  {
-    'cycle time': 18,
-    speed: 101,
-    uptime: 44,
-  },
-];
+import { useParams } from 'react-router-dom';
+import data from '../../../data.json';
 
 export default function Line() {
+  const { lineId } = useParams();
+  const { factoryId } = useParams();
+  const lineData = data[+factoryId - 1].lines[+lineId - 1];
   return (
     <>
       <Typography
@@ -66,7 +23,7 @@ export default function Line() {
           mb: '22px',
         }}
       >
-        Line Name
+        {lineData.lineName}
       </Typography>
       <Box
         component="article"
@@ -83,13 +40,13 @@ export default function Line() {
           alignItems="start"
           flexGrow={1}
         >
-          <LineTotalProduction />
-          <LinePreformance />
-          <PowerKPI />
-          <CurrentActivity />
-          <TimeLine />
+          <LineTotalProduction data={lineData.yeild} />
+          <LinePreformance data={lineData.preformance} />
+          <PowerKPI data={lineData.power} />
+          <CurrentActivity data={lineData.activity} />
+          <TimeLine name={lineData.lineName} data={lineData.timeLine} />
         </Stack>
-        <StreamTable data={data} />
+        <StreamTable data={lineData.stream} />
       </Box>
     </>
   );

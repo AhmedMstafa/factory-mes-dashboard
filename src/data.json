@@ -1,0 +1,1328 @@
+[
+  {
+    "factoryName": "Factory 1",
+    "actualSpeed": "5,000",
+    "actualProduction": "20,000",
+    "cycleTime": "20",
+    "Ratio": "5:2",
+    "oee": "76",
+    "sle": "76",
+    "usle": "76",
+    "volume": "500",
+    "quality": "5000",
+    "bottle": "5000",
+    "pack": "50",
+    "pallete": "10",
+    "preformancePer": "30",
+    "qualityPer": "60",
+    "energy": {
+      "perLiter": "500",
+      "perBottle": "500"
+    },
+    "water": {
+      "perLiter": "500",
+      "perBottle": "500"
+    },
+    "lossTree": [
+      {
+        "loss tree": "Idle",
+        "idle": 5,
+        "cleansing process": 92,
+        "break-down": 156,
+        "speed loss": 108,
+        "quality loss": 74
+      },
+      {
+        "loss tree": "Quality Loss",
+        "idle": 160,
+        "cleansing process": 12,
+        "break-down": 2,
+        "speed loss": 53,
+        "quality loss": 54
+      },
+      {
+        "loss tree": "Cleansing process",
+        "idle": 90,
+        "cleansing process": 149,
+        "break-down": 195,
+        "speed loss": 125,
+        "quality loss": 125
+      },
+      {
+        "loss tree": "Break-down",
+        "idle": 133,
+        "cleansing process": 23,
+        "break-down": 195,
+        "speed loss": 47,
+        "quality loss": 56
+      },
+      {
+        "loss tree": "Speed Loss",
+        "idle": 69,
+        "cleansing process": 65,
+        "break-down": 182,
+        "speed loss": 73,
+        "quality loss": 18
+      },
+      {
+        "loss tree": "Minor stops",
+        "idle": 79,
+        "cleansing process": 94,
+        "break-down": 145,
+        "speed loss": 135,
+        "quality loss": 82
+      },
+      {
+        "loss tree": "Break-down",
+        "idle": 91,
+        "cleansing process": 34,
+        "break-down": 129,
+        "speed loss": 40,
+        "quality loss": 34
+      }
+    ],
+    "timeLine": [
+      {
+        "loss tree": "Quality Loss",
+        "idle": 160,
+        "cleansing process": 12,
+        "break-down": 2,
+        "speed loss": 53,
+        "quality loss": 54
+      }
+    ],
+    "stream": [
+      {
+        "cycle time": 14,
+        "speed": 99,
+        "uptime": 142
+      },
+      {
+        "cycle time": 59,
+        "speed": 74,
+        "uptime": 100
+      },
+      {
+        "cycle time": 191,
+        "speed": 64,
+        "uptime": 93
+      },
+      {
+        "cycle time": 141,
+        "speed": 32,
+        "uptime": 116
+      },
+      {
+        "cycle time": 68,
+        "speed": 185,
+        "uptime": 50
+      },
+      {
+        "cycle time": 195,
+        "speed": 93,
+        "uptime": 90
+      },
+      {
+        "cycle time": 18,
+        "speed": 90,
+        "uptime": 71
+      },
+      {
+        "cycle time": 69,
+        "speed": 180,
+        "uptime": 48
+      },
+      {
+        "cycle time": 18,
+        "speed": 101,
+        "uptime": 44
+      }
+    ],
+    "lines": [
+      {
+        "lineName": "Line 1",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      },
+      {
+        "lineName": "Line 2",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      },
+      {
+        "lineName": "Line 3",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "factoryName": "Factory 2",
+    "actualSpeed": "5,000",
+    "actualProduction": "20,000",
+    "cycleTime": "20",
+    "Ratio": "5:2",
+    "oee": "76",
+    "sle": "76",
+    "usle": "76",
+    "volume": "500",
+    "quality": "5000",
+    "bottle": "5000",
+    "pack": "50",
+    "pallete": "10",
+    "preformancePer": "30",
+    "qualityPer": "60",
+    "energy": {
+      "perLiter": "500",
+      "perBottle": "500"
+    },
+    "water": {
+      "perLiter": "500",
+      "perBottle": "500"
+    },
+    "lossTree": [
+      {
+        "loss tree": "Idle",
+        "idle": 5,
+        "cleansing process": 92,
+        "break-down": 156,
+        "speed loss": 108,
+        "quality loss": 74
+      },
+      {
+        "loss tree": "Quality Loss",
+        "idle": 160,
+        "cleansing process": 12,
+        "break-down": 2,
+        "speed loss": 53,
+        "quality loss": 54
+      },
+      {
+        "loss tree": "Cleansing process",
+        "idle": 90,
+        "cleansing process": 149,
+        "break-down": 195,
+        "speed loss": 125,
+        "quality loss": 125
+      },
+      {
+        "loss tree": "Break-down",
+        "idle": 133,
+        "cleansing process": 23,
+        "break-down": 195,
+        "speed loss": 47,
+        "quality loss": 56
+      },
+      {
+        "loss tree": "Speed Loss",
+        "idle": 69,
+        "cleansing process": 65,
+        "break-down": 182,
+        "speed loss": 73,
+        "quality loss": 18
+      },
+      {
+        "loss tree": "Minor stops",
+        "idle": 79,
+        "cleansing process": 94,
+        "break-down": 145,
+        "speed loss": 135,
+        "quality loss": 82
+      },
+      {
+        "loss tree": "Break-down",
+        "idle": 91,
+        "cleansing process": 34,
+        "break-down": 129,
+        "speed loss": 40,
+        "quality loss": 34
+      }
+    ],
+    "timeLine": [
+      {
+        "loss tree": "Quality Loss",
+        "idle": 160,
+        "cleansing process": 12,
+        "break-down": 2,
+        "speed loss": 53,
+        "quality loss": 54
+      }
+    ],
+    "stream": [
+      {
+        "cycle time": 14,
+        "speed": 99,
+        "uptime": 142
+      },
+      {
+        "cycle time": 59,
+        "speed": 74,
+        "uptime": 100
+      },
+      {
+        "cycle time": 191,
+        "speed": 64,
+        "uptime": 93
+      },
+      {
+        "cycle time": 141,
+        "speed": 32,
+        "uptime": 116
+      },
+      {
+        "cycle time": 68,
+        "speed": 185,
+        "uptime": 50
+      },
+      {
+        "cycle time": 195,
+        "speed": 93,
+        "uptime": 90
+      },
+      {
+        "cycle time": 18,
+        "speed": 90,
+        "uptime": 71
+      },
+      {
+        "cycle time": 69,
+        "speed": 180,
+        "uptime": 48
+      },
+      {
+        "cycle time": 18,
+        "speed": 101,
+        "uptime": 44
+      }
+    ],
+    "lines": [
+      {
+        "lineName": "Line 1",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      },
+      {
+        "lineName": "Line 2",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      },
+      {
+        "lineName": "Line 3",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "factoryName": "Factory 3",
+    "actualSpeed": "5,000",
+    "actualProduction": "20,000",
+    "cycleTime": "20",
+    "Ratio": "5:2",
+    "oee": "76",
+    "sle": "76",
+    "usle": "76",
+    "volume": "500",
+    "quality": "5000",
+    "bottle": "5000",
+    "pack": "50",
+    "pallete": "10",
+    "preformancePer": "30",
+    "qualityPer": "60",
+    "energy": {
+      "perLiter": "500",
+      "perBottle": "500"
+    },
+    "water": {
+      "perLiter": "500",
+      "perBottle": "500"
+    },
+    "lossTree": [
+      {
+        "loss tree": "Idle",
+        "idle": 5,
+        "cleansing process": 92,
+        "break-down": 156,
+        "speed loss": 108,
+        "quality loss": 74
+      },
+      {
+        "loss tree": "Quality Loss",
+        "idle": 160,
+        "cleansing process": 12,
+        "break-down": 2,
+        "speed loss": 53,
+        "quality loss": 54
+      },
+      {
+        "loss tree": "Cleansing process",
+        "idle": 90,
+        "cleansing process": 149,
+        "break-down": 195,
+        "speed loss": 125,
+        "quality loss": 125
+      },
+      {
+        "loss tree": "Break-down",
+        "idle": 133,
+        "cleansing process": 23,
+        "break-down": 195,
+        "speed loss": 47,
+        "quality loss": 56
+      },
+      {
+        "loss tree": "Speed Loss",
+        "idle": 69,
+        "cleansing process": 65,
+        "break-down": 182,
+        "speed loss": 73,
+        "quality loss": 18
+      },
+      {
+        "loss tree": "Minor stops",
+        "idle": 79,
+        "cleansing process": 94,
+        "break-down": 145,
+        "speed loss": 135,
+        "quality loss": 82
+      },
+      {
+        "loss tree": "Break-down",
+        "idle": 91,
+        "cleansing process": 34,
+        "break-down": 129,
+        "speed loss": 40,
+        "quality loss": 34
+      }
+    ],
+    "timeLine": [
+      {
+        "loss tree": "Quality Loss",
+        "idle": 160,
+        "cleansing process": 12,
+        "break-down": 2,
+        "speed loss": 53,
+        "quality loss": 54
+      }
+    ],
+    "stream": [
+      {
+        "cycle time": 14,
+        "speed": 99,
+        "uptime": 142
+      },
+      {
+        "cycle time": 59,
+        "speed": 74,
+        "uptime": 100
+      },
+      {
+        "cycle time": 191,
+        "speed": 64,
+        "uptime": 93
+      },
+      {
+        "cycle time": 141,
+        "speed": 32,
+        "uptime": 116
+      },
+      {
+        "cycle time": 68,
+        "speed": 185,
+        "uptime": 50
+      },
+      {
+        "cycle time": 195,
+        "speed": 93,
+        "uptime": 90
+      },
+      {
+        "cycle time": 18,
+        "speed": 90,
+        "uptime": 71
+      },
+      {
+        "cycle time": 69,
+        "speed": 180,
+        "uptime": 48
+      },
+      {
+        "cycle time": 18,
+        "speed": 101,
+        "uptime": 44
+      }
+    ],
+    "lines": [
+      {
+        "lineName": "Line 1",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      },
+      {
+        "lineName": "Line 2",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      },
+      {
+        "lineName": "Line 3",
+        "yeild": "75",
+        "preformance": {
+          "avalability": "80",
+          "preformance": "30",
+          "quality": "60",
+          "oee": "76"
+        },
+        "power": {
+          "energy": "5,000",
+          "production": "7,000"
+        },
+        "activity": [
+          {
+            "activity": 22
+          },
+          {
+            "activity": 24
+          },
+          {
+            "activity": 77
+          },
+          {
+            "activity": 113
+          },
+          {
+            "activity": 10
+          },
+          {
+            "activity": 83
+          },
+          {
+            "activity": 155
+          },
+          {
+            "activity": 76
+          },
+          {
+            "activity": 172
+          }
+        ],
+        "timeLine": [
+          {
+            "loss tree": "Quality Loss",
+            "idle": 160,
+            "cleansing process": 12,
+            "break-down": 2,
+            "speed loss": 53,
+            "quality loss": 54
+          }
+        ],
+        "stream": [
+          {
+            "cycle time": 14,
+            "speed": 99,
+            "uptime": 142
+          },
+          {
+            "cycle time": 59,
+            "speed": 74,
+            "uptime": 100
+          },
+          {
+            "cycle time": 191,
+            "speed": 64,
+            "uptime": 93
+          },
+          {
+            "cycle time": 141,
+            "speed": 32,
+            "uptime": 116
+          },
+          {
+            "cycle time": 68,
+            "speed": 185,
+            "uptime": 50
+          },
+          {
+            "cycle time": 195,
+            "speed": 93,
+            "uptime": 90
+          },
+          {
+            "cycle time": 18,
+            "speed": 90,
+            "uptime": 71
+          },
+          {
+            "cycle time": 69,
+            "speed": 180,
+            "uptime": 48
+          },
+          {
+            "cycle time": 18,
+            "speed": 101,
+            "uptime": 44
+          }
+        ]
+      }
+    ]
+  }
+]

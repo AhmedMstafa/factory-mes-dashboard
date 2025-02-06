@@ -1,10 +1,9 @@
 import { Box, Paper, Stack, Typography } from '@mui/material';
 import { HiOutlineLightningBolt } from 'react-icons/hi';
 import { IoWaterOutline } from 'react-icons/io5';
-
 import { PiArrowsDownUp } from 'react-icons/pi';
 
-export default function UsageKPI() {
+export default function UsageKPI({ data }) {
   return (
     <Paper
       sx={{
@@ -79,7 +78,7 @@ export default function UsageKPI() {
                 <Typography
                   sx={{ color: 'var(--granite-grey)', fontSize: 'var(--fs-6)' }}
                 >
-                  500
+                  {data.energy.perLiter}
                 </Typography>
                 <Typography
                   sx={{
@@ -116,7 +115,7 @@ export default function UsageKPI() {
                 <Typography
                   sx={{ color: 'var(--granite-grey)', fontSize: 'var(--fs-6)' }}
                 >
-                  500
+                  {data.energy.perBottle}
                 </Typography>
                 <Typography
                   sx={{
@@ -168,7 +167,7 @@ export default function UsageKPI() {
                 <Typography
                   sx={{ color: 'var(--granite-grey)', fontSize: 'var(--fs-6)' }}
                 >
-                  500
+                  {data.water.perLiter}
                 </Typography>
                 <Typography
                   sx={{
@@ -205,7 +204,7 @@ export default function UsageKPI() {
                 <Typography
                   sx={{ color: 'var(--granite-grey)', fontSize: 'var(--fs-6)' }}
                 >
-                  500
+                  {data.water.perLiter}
                 </Typography>
                 <Typography
                   sx={{

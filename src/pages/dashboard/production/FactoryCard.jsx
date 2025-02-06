@@ -6,10 +6,9 @@ import { RxReload } from 'react-icons/rx';
 import { MdOutlineShowChart } from 'react-icons/md';
 import { SlEqualizer } from 'react-icons/sl';
 import { PiMedalLight } from 'react-icons/pi';
-
 import Pie from '../../../components/pie-chart/Pie';
 
-export default function FactoryCart() {
+export default function FactoryCart({ factory }) {
   function onClickHandler() {}
 
   return (
@@ -48,7 +47,7 @@ export default function FactoryCart() {
             fontSize: 'var(--fs-4)',
           }}
         >
-          Factory Name
+          {factory.factoryName}
         </Button>
         <Box
           sx={{
@@ -58,25 +57,25 @@ export default function FactoryCart() {
           <CardFaild
             icon={<MdSpeed fontSize={24} />}
             title="Actual speed"
-            value="5,000"
+            value={factory.actualSpeed}
             subValue="L/s"
           />
           <CardFaild
             icon={<TbSettingsAutomation fontSize={24} />}
             title="Actual production"
-            value="20,000"
+            value={factory.actualProduction}
             subValue="L"
           />
           <CardFaild
             icon={<RxReload fontSize={24} />}
             title="Last hour cycle time"
-            value="20"
+            value={factory.cycleTime}
             subValue="s"
           />
           <CardFaild
             icon={<MdOutlineShowChart fontSize={24} />}
             title="Ratio of active lines"
-            value="5:2"
+            value={factory.Ratio}
             subValue=""
           />
         </Box>
@@ -107,19 +106,19 @@ export default function FactoryCart() {
         <Stack direction="row" justifyContent="center" gap={3} my="23px">
           <Pie
             lable={'OEE'}
-            value={76}
+            value={factory.oee}
             color={'var( --sunburst-orange)'}
             background={'var(--granite-grey)'}
           />
           <Pie
             lable={'SLE'}
-            value={76}
+            value={factory.sle}
             color={'var(--electric-cyan)'}
             background={'var(--granite-grey)'}
           />
           <Pie
             lable={'USLE'}
-            value={76}
+            value={factory.usle}
             color={'var(--blush-pink)'}
             background={'var(--granite-grey)'}
           />
@@ -132,13 +131,13 @@ export default function FactoryCart() {
           <CardFaild
             icon={<SlEqualizer fontSize={24} />}
             title="Production volume"
-            value="500"
+            value={factory.valume}
             subValue="L"
           />
           <CardFaild
             icon={<PiMedalLight fontSize={24} />}
             title="Production quality"
-            value="5,000"
+            value={factory.quality}
             subValue=""
           />
         </Box>

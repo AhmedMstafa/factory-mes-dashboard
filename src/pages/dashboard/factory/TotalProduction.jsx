@@ -1,11 +1,10 @@
 import { BiPackage } from 'react-icons/bi';
-
 import { TbBottle } from 'react-icons/tb';
 import { GoPackage } from 'react-icons/go';
 import { CiPalette } from 'react-icons/ci';
 import { Paper, Stack, Typography } from '@mui/material';
 
-export default function TotalProduction() {
+export default function TotalProduction({ data }) {
   return (
     <Paper
       sx={{
@@ -61,7 +60,7 @@ export default function TotalProduction() {
               ml: 'auto',
             }}
           >
-            500K
+            {data.bottle}K
           </Typography>
         </Stack>
         <Stack direction="row" alignItems="center" flexGrow={1}>
@@ -83,7 +82,7 @@ export default function TotalProduction() {
               ml: 'auto',
             }}
           >
-            50K
+            {data.pack}K
           </Typography>
         </Stack>
         <Stack direction="row" alignItems="center" flexGrow={1}>
@@ -105,7 +104,7 @@ export default function TotalProduction() {
               ml: 'auto',
             }}
           >
-            10K
+            {data.pallete}K
           </Typography>
         </Stack>
       </Stack>

@@ -3,7 +3,7 @@ import { BiPackage } from 'react-icons/bi';
 import { Box, Paper, Stack, Typography } from '@mui/material';
 import Progress from '../../../components/Progress';
 
-export default function LineTotalProduction() {
+export default function LineTotalProduction({ data }) {
   return (
     <Paper
       sx={{
@@ -90,7 +90,7 @@ export default function LineTotalProduction() {
       <Box px="29px" py="29px">
         <Progress
           title="Production Yield"
-          width={75}
+          width={data}
           bgcolor="var(--bright-orange)"
         />
       </Box>

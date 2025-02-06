@@ -1,5 +1,6 @@
 import { Box, Button, Stack, Typography } from '@mui/material';
 import FactoryCart from './FactoryCard';
+import data from '../../../data.json';
 
 export default function Production() {
   return (
@@ -60,37 +61,9 @@ export default function Production() {
         justifyContent="space-evenly"
         gap={3}
       >
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
-        <FactoryCart />
+        {data.map((factory) => (
+          <FactoryCart key={factory.factoryName} factory={factory} />
+        ))}
       </Stack>
     </>
   );

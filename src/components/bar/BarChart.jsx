@@ -5,13 +5,13 @@ export default function BarChart({ data }) {
     <ResponsiveBar
       data={data}
       keys={[
-        'Idle',
-        'Cleansing process',
-        'Break-down',
-        'Speed Loss',
-        'Quality Loss',
+        'idle',
+        'cleansing process',
+        'break-down',
+        'speed loss',
+        'quality loss',
       ]}
-      indexBy="Loss Tree"
+      indexBy="loss tree"
       margin={{ top: 30, right: 10, bottom: 50, left: 10 }}
       padding={0.4}
       valueScale={{ type: 'linear' }}

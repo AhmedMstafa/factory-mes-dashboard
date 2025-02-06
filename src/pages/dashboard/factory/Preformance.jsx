@@ -3,7 +3,7 @@ import Pie from '../../../components/pie-chart/Pie';
 import { RiEqualizerLine } from 'react-icons/ri';
 import Progress from '../../../components/Progress';
 
-export default function Preformance() {
+export default function Preformance({ data }) {
   return (
     <>
       <Paper
@@ -50,19 +50,19 @@ export default function Preformance() {
           >
             <Pie
               lable={'OEE'}
-              value={76}
+              value={data.oee}
               color={'var(--ocean-navy)'}
               background={'var(--granite-grey)'}
             />
             <Pie
               lable={'SLE'}
-              value={76}
+              value={data.sle}
               color={'var(--electric-cyan)'}
               background={'var(--granite-grey)'}
             />
             <Pie
-              lable={'OEE'}
-              value={76}
+              lable={'USLE'}
+              value={data.usle}
               color={'var(--blush-pink)'}
               background={'var(--granite-grey)'}
             />
@@ -76,10 +76,14 @@ export default function Preformance() {
           >
             <Progress
               title="Preformance"
-              width={30}
+              width={data.preformancePer}
               bgcolor="var(--steel-grey)"
             />
-            <Progress title="Quality" width={60} bgcolor="var(--steel-grey)" />
+            <Progress
+              title="Quality"
+              width={data.qualityPer}
+              bgcolor="var(--steel-grey)"
+            />
           </Stack>
         </Stack>
       </Paper>

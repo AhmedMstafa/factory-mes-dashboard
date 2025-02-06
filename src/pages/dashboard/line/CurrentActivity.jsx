@@ -2,43 +2,13 @@ import { Paper, Stack, Typography } from '@mui/material';
 import LineStream from '../../../components/stream/LineStream';
 import { BsActivity } from 'react-icons/bs';
 
-const data = [
-  {
-    activity: 22,
-  },
-  {
-    activity: 24,
-  },
-  {
-    activity: 77,
-  },
-  {
-    activity: 113,
-  },
-  {
-    activity: 10,
-  },
-  {
-    activity: 83,
-  },
-  {
-    activity: 155,
-  },
-  {
-    activity: 76,
-  },
-  {
-    activity: 172,
-  },
-];
-
-export default function CurrentActivity() {
+export default function CurrentActivity({ data }) {
   return (
     <>
       <Paper
         sx={{
           width: '300px',
-          minWidth: { md: '500px' },
+          minWidth: { xs: '100%', md: '500px' },
           flex: 1,
           height: '400px',
           borderRadius: '8px',

@@ -157,7 +157,7 @@ export default function Header({ handleDrawerOpen, open }) {
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                onClick={handleDrawerOpen}
+                onClick={() => handleDrawerOpen(true)}
                 sx={{
                   display: { xs: 'flex', lg: 'none' },
                 }}

@@ -1,7 +1,7 @@
 import { Box, Paper, Stack, Typography } from '@mui/material';
 import { HiOutlineLightningBolt } from 'react-icons/hi';
 
-export default function PowerKPI() {
+export default function PowerKPI({ data }) {
   return (
     <Paper
       sx={{
@@ -45,7 +45,7 @@ export default function PowerKPI() {
           }}
         >
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography fontSize="var(--fs-8)">5,000</Typography>
+            <Typography fontSize="var(--fs-8)">{data.energy}</Typography>
             <Typography
               sx={{
                 fontSize: 'var(--fs-3)',
@@ -67,7 +67,7 @@ export default function PowerKPI() {
             flexDirection: 'column',
           }}
         >
-          <Typography fontSize="var(--fs-8)">7,000</Typography>
+          <Typography fontSize="var(--fs-8)">{data.production}</Typography>
           <Typography
             sx={{ fontSize: 'var(--fs-1)', color: 'var(--granite-grey)' }}
           >
@@ -84,7 +84,7 @@ export default function PowerKPI() {
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Typography fontSize="var(--fs-8)">5,000</Typography>
+          <Typography fontSize="var(--fs-8)">{data.energy}</Typography>
           <Typography
             sx={{
               fontSize: 'var(--fs-3)',

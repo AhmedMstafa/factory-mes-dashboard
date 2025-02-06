@@ -1,61 +1,16 @@
 import { Box, Stack, Typography } from '@mui/material';
-
 import TotalProduction from './TotalProduction';
 import Preformance from './Preformance';
 import UsageKPI from './UsageKPI';
 import StreamTable from '../../../components/stream/StreamTable';
 import LossTree from './LossTree';
 import TimeLine from './TimeLine';
-
-const data = [
-  {
-    'cycle time': 14,
-    speed: 99,
-    uptime: 142,
-  },
-  {
-    'cycle time': 59,
-    speed: 74,
-    uptime: 100,
-  },
-  {
-    'cycle time': 191,
-    speed: 64,
-    uptime: 93,
-  },
-  {
-    'cycle time': 141,
-    speed: 32,
-    uptime: 116,
-  },
-  {
-    'cycle time': 68,
-    speed: 185,
-    uptime: 50,
-  },
-  {
-    'cycle time': 195,
-    speed: 93,
-    uptime: 90,
-  },
-  {
-    'cycle time': 18,
-    speed: 90,
-    uptime: 71,
-  },
-  {
-    'cycle time': 69,
-    speed: 180,
-    uptime: 48,
-  },
-  {
-    'cycle time': 18,
-    speed: 101,
-    uptime: 44,
-  },
-];
+import { useParams } from 'react-router-dom';
+import data1 from '../../../data.json';
 
 export default function Factory() {
+  const { factoryId } = useParams();
+  const factoryData = data1[+factoryId - 1];
   return (
     <>
       <Typography
@@ -67,7 +22,7 @@ export default function Factory() {
           mb: '22px',
         }}
       >
-        Factory Name
+        {factoryData.factoryName}
       </Typography>
       <Box
         component="article"
@@ -84,13 +39,13 @@ export default function Factory() {
           alignItems="start"
           flexGrow={1}
         >
-          <TotalProduction />
-          <Preformance />
-          <UsageKPI />
-          <LossTree />
-          <TimeLine />
+          <TotalProduction data={factoryData} />
+          <Preformance data={factoryData} />
+          <UsageKPI data={factoryData} />
+          <LossTree data={factoryData.lossTree} />
+          <TimeLine name="All lines" data={factoryData.timeLine} />
         </Stack>
-        <StreamTable data={data} />
+        <StreamTable data={factoryData.stream} />
       </Box>
     </>
   );

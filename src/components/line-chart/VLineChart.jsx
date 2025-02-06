@@ -6,10 +6,10 @@ export default function vLineCahrt({ data /* see data tab */ }) {
       data={data}
       keys={[
         'Idle',
-        'Cleansing process',
-        'Break-down',
-        'Speed Loss',
-        'Quality Loss',
+        'cleansing process',
+        'break-down',
+        'speed loss',
+        'quality loss',
       ]}
       indexBy="Loss Tree"
       margin={{ top: 30, right: 20, bottom: 70, left: 20 }}
