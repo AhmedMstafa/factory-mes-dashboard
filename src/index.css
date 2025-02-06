@@ -3,4 +3,59 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --fs-1: 0.625rem; /* 10px */
+  --fs-2: 0.6875rem; /* 11px */
+  --fs-3: 0.75rem; /* 12px */
+  --fs-4: 0.875rem; /* 14px */
+  --fs-5: 1rem; /* 16px */
+  --fs-6: 1.125rem; /* 18px */
+  --fs-7: 1.25rem; /* 20px */
+  --fs-8: 1.3125rem; /* 21px */
+  --fs-9: 1.5rem; /* 24px */
+  --fs-10: 1.625rem; /* 26px */
+  --fs-11: 2.375rem; /* 38px  */
+  --eclipse-black: #000000; /* Black */
+  --shadow-black: #0000001a; /* Black 10% opacity */
+  --dim-black: #0000001c; /* Black 11% opacity */
+  --twilight-black: #00000029; /* Black 16% opacity */
+  --deep-sea-blue: #003f5c; /* Dark Blue */
+  --ocean-navy: #08415c; /* Dark Blue */
+  --steel-grey: #2c3e50; /* Dark Grey-Blue */
+  --aqua-teal: #2ec4b6; /* Light Teal */
+  --misty-aqua: #2ec4b633; /* Light Teal 20% opacity */
+  --sky-steel: #457b9d; /* Steel Blue */
+  --dusky-sky: #4c788d; /* Steel Blue */
+  --cloud-grey: #707070; /* Grey */
+  --mist-blue-grey: #7388a95a; /* Light Blue-Grey 35% opacity */
+  --granite-grey: #8d9192; /* Mid Grey */
+  --silver-mist: #b2bec3; /* Light Grey */
+  --foggy-silver: #b2bec39c; /* Light Grey 61% opacity */
+  --blush-pink: #ca4e82; /* Dark Pink */
+  --rose-mist: #ca4e8233; /* Dark Pink 20% opacity */
+  --crystal-blue: #cdd5e1; /* Very Light Blue */
+  --pearl-grey: #eeeeee; /* Very Light Grey */
+  --moonlight-grey: #efefef; /* Very Light Grey */
+  --sunset-orange: #f39c1200; /* Orange 0% opacity */
+  --frost-blue: #f4f7fe; /* Very Light Blue */
+  --flame-red: #f40009; /* Red */
+  --bright-orange: #ff5400; /* Bright Orange */
+  --tangerine-dream: #ff540033; /* Bright Orange 20% opacity */
+  --sunburst-orange: #ff9f1c; /* Light Orange */
+  --pale-sunburst: #ff9f1c33; /* Light Orange 20% opacity */
+  --pure-white: #ffffff; /* White */
+  --electric-cyan: #00d1de; /* Bright Cyan */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:link,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  
 }
