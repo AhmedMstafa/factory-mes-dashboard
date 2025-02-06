@@ -3,7 +3,7 @@ import Pie from '../../../components/pie-chart/Pie';
 import { RiEqualizerLine } from 'react-icons/ri';
 import Progress from '../../../components/Progress';
 
-export default function Preformance() {
+export default function LinePreformance() {
   return (
     <>
       <Paper
@@ -47,6 +47,7 @@ export default function Preformance() {
             justifyContent="center"
             alignItems="center"
             borderRight="1px solid var(--moonlight-grey)"
+            flexGrow={1}
           >
             <Pie
               lable={'OEE'}
@@ -54,32 +55,29 @@ export default function Preformance() {
               color={'var(--ocean-navy)'}
               background={'var(--granite-grey)'}
             />
-            <Pie
-              lable={'SLE'}
-              value={76}
-              color={'var(--electric-cyan)'}
-              background={'var(--granite-grey)'}
-            />
-            <Pie
-              lable={'OEE'}
-              value={76}
-              color={'var(--blush-pink)'}
-              background={'var(--granite-grey)'}
-            />
           </Stack>
           <Stack
             minWidth="50%"
-            flexGrow={1}
+            flexGrow={2}
             gap={1}
             paddingLeft="15px"
             my="auto"
           >
             <Progress
+              title="Avalability"
+              width={80}
+              bgcolor="var(--bright-orange)"
+            />
+            <Progress
               title="Preformance"
               width={30}
-              bgcolor="var(--steel-grey)"
+              bgcolor="var(--sunburst-orange)"
             />
-            <Progress title="Quality" width={60} bgcolor="var(--steel-grey)" />
+            <Progress
+              title="Quality"
+              width={60}
+              bgcolor="var(--bright-orange)"
+            />
           </Stack>
         </Stack>
       </Paper>

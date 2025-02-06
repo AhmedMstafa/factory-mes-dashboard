@@ -7,7 +7,7 @@ export default function StreamTable({ data }) {
       sx={{
         width: '282px',
         flex: '1',
-        alignSelf: 'start',
+        alignSelf: 'auto',
         borderRadius: '8px',
         cursor: 'pointer',
         border: 'none',

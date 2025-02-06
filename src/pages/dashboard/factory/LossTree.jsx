@@ -96,7 +96,7 @@ const data = [
   },
 ];
 
-export default function Preformance() {
+export default function LossTree() {
   return (
     <>
       <Paper

@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material';
 
-export default function Progress({ title, width }) {
+export default function Progress({ title, width, bgcolor }) {
   return (
     <>
       <Stack
@@ -25,7 +25,7 @@ export default function Progress({ title, width }) {
           <Box
             sx={{
               borderRadius: '5px',
-              bgcolor: 'var(--steel-grey)',
+              bgcolor: bgcolor,
               width: `${width}%`,
             }}
           ></Box>
