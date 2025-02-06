@@ -17,7 +17,7 @@ export default function FormLogin() {
     if (localStorage.getItem('auth')) {
       navigate('/dashboard/production');
     }
-  }, []);
+  });
 
   function handleSubmit(event) {
     event.preventDefault();

@@ -8,8 +8,7 @@ import Reports from './pages/reports/Reports.jsx';
 import Settings from './pages/settings/Settings.jsx';
 import Login from './pages/login/Login.jsx';
 import { getCustomTheme } from './Theme';
-import { useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import { useMemo, useState } from 'react';
 import Production from './pages/dashboard/production/Production.jsx';
 import Factory from './pages/dashboard/factory/Factory.jsx';
 import Line from './pages/dashboard/line/Line.jsx';
@@ -42,8 +41,7 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  // @ts-ignore
-  const currentTheme = useSelector((state) => state.theme.value);
+  const [currentTheme] = useState('light');
   const myTheme = useMemo(
     () => createTheme(getCustomTheme(currentTheme)),
     [currentTheme]
